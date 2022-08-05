@@ -14,13 +14,11 @@ namespace Backup_Time_Writer
     /// </summary>
     public partial class App : Application
     {
-        private ConfigModel model = new ConfigModel();
-
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            if (!Directory.Exists(model.BackupDrive)) // No backup drive connected
+            if (!Directory.Exists(ConfigModel.BackupDrive)) // No backup drive connected
             {
-                MessageBox.Show("The backup drive " + model.BackupDrive + " isn't connected to the computer.", "Backup Drive Not Found", MessageBoxButton.OK);
+                MessageBox.Show("The backup drive " + ConfigModel.BackupDrive + " isn't connected to the computer.", "Backup Drive Not Found", MessageBoxButton.OK);
                 this.Shutdown((int)ExitCode.Code.NO_BACKUP_DRIVE);
             }
         }
