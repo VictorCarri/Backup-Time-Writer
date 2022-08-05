@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.IO; // Directory.Exists
 using System.Windows;
-using System.IO; // Directory.Exists
 
 namespace Backup_Time_Writer
 {
@@ -14,6 +8,8 @@ namespace Backup_Time_Writer
     /// </summary>
     public partial class App : Application
     {
+        /**
+        **/
         private void Application_Startup(object sender, StartupEventArgs e)
         {
             if (!Directory.Exists(ConfigModel.BackupDrive)) // No backup drive connected
