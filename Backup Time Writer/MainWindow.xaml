@@ -1,4 +1,4 @@
-﻿<Window x:Name="Form" x:Class="Backup_Time_Writer.MainWindow"
+﻿<Window x:Name="BackupTimeWriter" x:Class="Backup_Time_Writer.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,5 +8,6 @@
         Title="Backup Time Writer" Height="450" Width="800"
         >
     <Grid>
+        <local:NavButton NavText="Hello World" NavUri="http://www.google.ca" />
     </Grid>
 </Window>
